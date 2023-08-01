@@ -1,0 +1,124 @@
+  body {
+      background-color: #f2f2f7;
+      font-family: 'Helvetica', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+  }
+
+  .login-container {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+  }
+
+  .login-container h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+  }
+
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+  }
+
+  .login-form input[type="submit"] {
+      background-color: #007aff;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+  }
+
+  .login-form input[type="submit"]:hover {
+      background-color: #003080;
+  }
+  a {
+    position: relative; 
+    left:67.2px;
+  }
+
+  .login-form input#password.error {
+      border: 1px solid red;
+    }
+
+  @keyframes shakeAnimation {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(-10px) rotate(-5deg); }
+    20% { transform: translateX(10px) rotate(5deg); }
+    30% { transform: translateX(-10px) rotate(-5deg); }
+    40% { transform: translateX(10px) rotate(5deg); }
+    50% { transform: translateX(-10px) rotate(-5deg); }
+    60% { transform: translateX(10px) rotate(5deg); }
+    70% { transform: translateX(-10px) rotate(-5deg); }
+    80% { transform: translateX(10px) rotate(5deg); }
+    90% { transform: translateX(-10px) rotate(-5deg); }
+    100% { transform: translateX(0); }
+  }
+  
+  @keyframes redFlash {
+    0% { background-color: red; }
+    50% { background-color: white; }
+    100% { background-color: red; }
+  }
+  
+  .red-flash {
+    animation: redFlash 20s, shakeAnimation 1s;
+  }
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  #error-message {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: slideUp 0.5s ease-in-out;
+
+  }
+
+  .login-form a {
+      width:50%;
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      color:#fff;
+      text-decoration: none;
+      font-size: 14px;
+      background-color: #007aff;
+      padding: 10px;
+      border-radius: 3px;
+      transition: background-color 0.3s;
+    }
+  
+  .login-form a:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+  
+  .login-form a:active {
+    background-color: #003080;
+  }
+  
