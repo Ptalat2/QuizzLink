@@ -54,7 +54,7 @@ app.post("/signup", async (req, res) => {
         password: password
       };
       await collection.create(data);
-      res.render("home");
+      res.render("home",{Response: {user:data.name}});
     }
   } catch (error) {
     console.error(error);
@@ -68,7 +68,7 @@ app.post("/signup", async (req, res) => {
   try {
     const check = await collection.findOne({ name: req.body.name });
     if (check.password === req.body.password) {
-      res.render("home");
+      res.render("home",{Response: {user:req.body.name}});
     } else {
         res.render('login', { errorResponse: { message: 'Wrong password', count:2 } });
        
